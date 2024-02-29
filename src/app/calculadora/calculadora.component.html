@@ -1,0 +1,16 @@
+<div>
+	<label for="capital">Capital Inicial:</label>
+	<input type="number" id="capital" [(ngModel)]="capital">
+</div>
+<div>
+	<label for="juros">Taxa de juros anual:</label>
+	<input type="number" id="juros" [(ngModel)]="juros">
+</div>
+<div>
+	<label for="tempo">Tempo de aplicação (em anos)</label>
+	<input type="number" id="tempo" [(ngModel)]="tempo">
+</div>
+<button (click)="calcularMedia()">Calcular Juros Compostos</button>
+<div *ngIf="media !== null">
+	 Juros: {{ media }}
+</div>
